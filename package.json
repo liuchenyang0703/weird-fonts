@@ -1,0 +1,38 @@
+{
+  "name": "weird-fonts",
+  "version": "0.1.2",
+  "description": "A JavaScript package that turn alphanumeric characters into weird font style.",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "example": "parcel example/index.html --out-dir exampleDist --open",
+    "test": "jest --coverage --verbose ./__tests__",
+    "readme": "ts-node ./script/generateReademe.ts",
+    "build": "microbundle",
+    "build:example": "parcel build example/index.html --out-dir exampleDist --public-url ./",
+    "deploy": "rm -rf ./exampleDist && yarn build:example && node ./script/deploy.js",
+    "dev": "microbundle watch"
+  },
+  "repository": "https://github.com/liuchenyang0703/weird-fonts.git",
+  "author": "Victor Liu <2162059863@qq.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.2",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
+    "gh-pages": "^2.0.1",
+    "jest": "^24.8.0",
+    "microbundle": "^0.11.0",
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  }
+}
